@@ -19,6 +19,7 @@ io.on('connection', (socket) => {
     console.log('user connected! ' + socket.id);
 
     socket.on('message', (data) => {
-        console.log(data);
+        // console.log(data);   show it on the screen!
+        socket.broadcast.emit('message',data)
     })
 })

@@ -20,7 +20,9 @@
         })
 
         const sendmessage = () => {
-            socket.emit('message','hey it worked')
+            const messageinput = document.querySelector('.message')
+            const message = messageinput.value
+            socket.emit('message',message)
         }
 
     </script>
